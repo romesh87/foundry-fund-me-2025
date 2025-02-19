@@ -10,7 +10,7 @@ contract DeployFundMe is Script {
     function run() external returns (FundMe) {
         // Before startBroadcast -> not "real" tx
         HelperConfig helperConfig = new HelperConfig();
-        (address ethPriceFeed, ) = helperConfig.activeNetworkConfig();
+        (address ethPriceFeed,) = helperConfig.activeNetworkConfig();
         // console.log("ethPriceFeed", ethPriceFeed);
         vm.startBroadcast();
         // After startBroadcast -> real tx
